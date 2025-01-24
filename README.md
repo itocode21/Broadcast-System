@@ -1,2 +1,29 @@
-# broadcast system
- Build a server that can broadcast messages to connected clients.
+# Broadcast Server and Client
+
+Проект представляет собой простой сервер и клиент для обмена сообщениями в реальном времени через WebSocket. Сервер рассылает сообщения от одного клиента всем подключенным клиентам.
+
+## Использование
+
+### Запуск сервера
+
+1. Перейди в директорию `server/`:
+   ```bash
+   cd server
+   ```
+2. Запусти сервер:
+    ```bash
+    go run cmd/main.go --port 8080
+    ```
+Сервер начнет слушать подключения на порту ```8080```.
+
+### Запуск сервера
+
+1. Перейди в директорию `client/`:
+   ```bash
+   cd client
+   ```
+2. Запусти клиент:
+    ```bash
+    go run cmd/main.go --addr localhost:8080
+    ```
+Клиент подключится к серверу на ```localhost:8080```.
